@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind & daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/14e2ece024.js" crossorigin="anonymous"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>P-Ticket</title>
+    <style>
+        .font-main {
+            font-family: 'Raleway', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="font-main">
+    <header class="mx-5 lg:mx-32 mb-16 lg:mb-24">
+        <!-- navbar -->
+        <nav class="navbar bg-base-100 my-10">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost font-extrabold text-2xl lg:text-4xl">P-Ticket</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <button class="btn btn-outline w-24 h-10 text-[#1DD100]">Bus<i class="fa-solid fa-bus"></i></button>
+            </div>
+        </nav>
+        <!-- banner section -->
+        <div class="hero min-h-screen rounded-2xl" style="background-image: url('images/banner.png');">
+            <div class="hero-overlay bg-opacity-0"></div>
+            <div class="hero-content text-center text-neutral-content">
+                <div class="max-w-xl space-y-10">
+                    <h1 class="mb-5 text-5xl font-bold">End-to-End travel with <br><span class="text-[#1DD100]">P
+                            Paribahan</span></h1>
+                    <p class="mb-5 text-gray-300">Travel the world with help of P Paribahan. From office to weddings, P
+                        Paribahan
+                        provides its clients with comfort, reliability and low-cost. Buy tickets & explore the world!
+                    </p>
+                    <button class="bg-[#1DD100] px-6 py-4 rounded-lg text-black font-extrabold">Buy Tickets</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="mb-16 lg:mb-24">
+        <!-- offers section -->
+        <section class="mb-16 lg:mb-24 mx-5 lg:mx-32">
+            <h1 class="text-2xl font-extrabold text-center mb-6 lg:mb-10">Best Offers for you</h1>
+            <div class="flex flex-col lg:flex-row gap-8 lg:gap-0 justify-between">
+                <div class="card lg:w-[33rem] lg:h-44 bg-base-100 shadow-xl bg-[#FFBF0F]">
+                    <div class="card-body flex flex-row justify-between items-center">
+                        <div>
+                            <h1 class="font-extrabold text-2xl">15% OFF</h1>
+                            <p class="font-bold">on yout next purchase</p>
+                            <p class="text-gray-600">use by January 2024</p>
+                        </div>
+                        <div class="justify-end">
+                            <h1 class="font-extrabold text-xl">NEW15</h1>
+                            <p class="text-gray-600">Coupon Code</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card lg:w-[33rem] bg-base-100 shadow-xl bg-[#F78C9C]">
+                    <div class="card-body flex flex-row justify-between items-center">
+                        <div>
+                            <h1 class="font-extrabold text-2xl">20% OFF</h1>
+                            <p class="font-bold">on yout next purchase</p>
+                            <p class="text-gray-600">use by January 2024</p>
+                        </div>
+                        <div class="justify-end">
+                            <h1 class="font-extrabold text-xl">Couple 20</h1>
+                            <p class="text-gray-600">Coupon Code</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <button class="btn btn-outline w-28 h-10 my-8 text-[#1DD100]">See All
+                    Offers</button>
+            </div>
+        </section>
+        <!-- ph paribahan section -->
+        <section class="bg-[#f7f8f8] border-t-[#1DD100] border-t-2 rounded-t-3xl">
+            <section class="mb-16 lg:mb-24 mx-5 lg:mx-32">
+                <div class="text-center space-y-4 pt-20">
+                    <h1 class="font-bold text-3xl">P H Paribahan</h1>
+                    <p class="text-gray-700">Find the route, select your seats and buy the tickets right now! Yes, its
+                        that
+                        easy. We also have
+                        limited
+                        time offers so grab now!</p>
+                </div>
+                <div class="bg-white mt-5 rounded-2xl pt-5 px-8 flex flex-col lg:flex-row gap-16">
+                    <div class="flex-1">
+                        <div class="flex flex-col lg:flex-row justify-between gap-4 lg:gap-24">
+                            <div class="flex items-center gap-4">
+                                <img src="images/bus-logo.png" alt="">
+                                <div class="space-y-2">
+                                    <h1 class="text-2xl font-bold">Greenline Paribahan</h1>
+                                    <p class="text-gray-700">Coach-009-WEB ! AC_Business</p>
+                                </div>
+                            </div>
+                            <button
+                                class="flex items-center gap-2 text-[#1DD100] font-bold bg-[#1DD1000A] px-4 py-3 mx-auto lg:mx-0 rounded-lg">
+                                <img src="images/seat-green.png" alt="">
+                                <h1>40 Seats left</h1>
+                            </button>
+                        </div>
+                        <div class="bg-[#f7f8f8] mt-5 py-5 px-5 rounded-2xl space-y-5">
+                            <div class="flex justify-between">
+                                <p>Route</p>
+                                <p class="font-bold">Dhaka - Sylhet</p>
+                            </div>
+                            <hr class="border border-dashed">
+                            <div class="flex justify-between">
+                                <p>Departure Time</p>
+                                <p class="font-bold">9:00 PM</p>
+                            </div>
+                            <hr class="border border-dashed">
+                            <div class="flex flex-col lg:flex-row gap-4 lg:gap-0 justify-between">
+                                <button class="bg-[#d2d6d6] px-4 py-3 rounded-lg">Boarding Point - Laxmipur</button>
+                                <button class="bg-[#d2d6d6] px-4 py-3 rounded-lg">Dropping Point - Bogura</button>
+                                <button class="bg-[#d2d6d6] px-4 py-3 rounded-lg">Est. Time - 11 Hour</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <div class="flex flex-col items-center">
+                            <img src="images/fare.png" alt="">
+                            <h1 class="font-bold text-2xl">500 Taka</h1>
+                            <p class="text-gray-700">Per Seat</p>
+                        </div>
+                    </div>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>
