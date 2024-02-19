@@ -11,8 +11,6 @@ const couponInfo = document.getElementById("coupon-info");
 const phoneNoInput = document.getElementById("phone-no-input");
 const nextBtn = document.getElementById("next-btn");
 const inputError = document.getElementById("input-error");
-const modalCloseBtn = document.getElementById("modal-close-btn");
-const modalBox = document.getElementById("my_modal_2");
 
 // storing the selected seats
 let selectedSeats = [];
@@ -79,10 +77,6 @@ phoneNoInput.addEventListener("input", (e) => {
       nextBtn.removeAttribute("disabled");
     }
   }
-});
-
-modalCloseBtn.addEventListener("click", () => {
-  modalBox.classList.add("hidden");
 });
 
 const createSeatElement = (htmlElement, text) => {
