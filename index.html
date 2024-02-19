@@ -251,7 +251,7 @@
                             <h3 class="font-bold">Total Price</h3>
                             <p class="font-bold">BDT <span id="total-price">0</span></p>
                         </div>
-                        <div class="flex justify-between">
+                        <div id="coupon-info" class="flex justify-between">
                             <input id="coupon-input" type="text" placeholder="Have any coupons?"
                                 class="input input-white w-full max-w-xs" disabled />
                             <button id="coupon-btn" class="btn bg-[#1DD100]" disabled>Apply</button>
@@ -272,8 +272,11 @@
                             <div class="label">
                                 <span class="label-text font-bold text-xl">Phone Number*</span>
                             </div>
-                            <input type="text" placeholder="Enter your phone number"
+                            <input id="phone-no-input" type="text" placeholder="Enter your phone number"
                                 class="input input-bordered w-full " />
+                            <div id="input-error">
+
+                            </div>
                         </label>
                         <label class="form-control w-full">
                             <div class="label">
@@ -282,7 +285,31 @@
                             <input type="email" placeholder="Enter your email id"
                                 class="input input-bordered w-full " />
                         </label>
-                        <button class="btn w-full bg-[#1DD100]" disabled>Next</button>
+                        <!-- <button id="next-btn" class="btn w-full bg-[#1DD100]" disabled>Next</button> -->
+                        <!-- Open the modal using ID.showModal() method -->
+                        <button id="next-btn" class="btn w-full bg-[#1DD100]" onclick="my_modal_2.showModal()"
+                            disabled>Next</button>
+                        <dialog id="my_modal_2" class="modal">
+                            <div class="modal-box">
+                                <!-- <h3 class="font-bold text-lg">Hello!</h3>
+                                <p class="py-4">Press ESC key or click outside to close</p> -->
+                                <div class="flex flex-col items-center gap-2 pt-4">
+                                    <div>
+                                        <img src="images/success.png" alt="">
+                                    </div>
+                                    <div class="text-center space-y-2">
+                                        <h1 class="font-semibold">Thank you for Booking our bus seats.</h1>
+                                        <h1 class="font-semibold">We are working hard to find the best service and deals
+                                            for you.</h1>
+                                        <p class="text-gray-500">Shortly you will find a confirmation in your email</p>
+                                        <button id="modal-close-btn" class="btn bg-[#1DD100]">Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <form method="dialog" class="modal-backdrop">
+                                <button>close</button>
+                            </form>
+                        </dialog>
                     </div>
                     <div class="flex justify-evenly mt-4">
                         <p class="underline text-gray-500 cursor-pointer">Terms and Conditions</p>

@@ -7,6 +7,12 @@ const totalPrice = document.getElementById("total-price");
 const grandTotal = document.getElementById("grand-total");
 const couponInput = document.getElementById("coupon-input");
 const couponBtn = document.getElementById("coupon-btn");
+const couponInfo = document.getElementById("coupon-info");
+const phoneNoInput = document.getElementById("phone-no-input");
+const nextBtn = document.getElementById("next-btn");
+const inputError = document.getElementById("input-error");
+const modalCloseBtn = document.getElementById("modal-close-btn");
+const modalBox = document.getElementById("my_modal_2");
 
 // storing the selected seats
 let selectedSeats = [];
@@ -21,7 +27,7 @@ for (let seat of seats) {
         selectedSeats.push(seat.innerText);
 
         // enabling coupon input if any seat is selected
-        if (selectedSeats.length > 0) {
+        if (selectedSeats.length == 4) {
           couponInput.removeAttribute("disabled");
           couponBtn.removeAttribute("disabled");
         }
@@ -47,17 +53,37 @@ for (let seat of seats) {
         // calculating total
         calculatePrice(totalPrice);
         calculatePrice(grandTotal);
-
-        if (couponInput.value === "NEW15") {
-          const discount = parseFloat((grandTotal.innerText * 15) / 100);
-          grandTotal.innerText = parseFloat(grandTotal.innerText - discount);
-        }
       }
     } else {
       alert("You can not select more than 4 seats!");
     }
   });
 }
+
+couponBtn.addEventListener("click", () => {
+  if (couponInput.value === "NEW15") {
+    calculateDiscount(15);
+    couponInfo.classList.add("hidden");
+  } else if (couponInput.value === "Couple 20") {
+    calculateDiscount(20);
+    couponInfo.classList.add("hidden");
+  } else {
+    alert("Please enter a valid coupon!");
+  }
+});
+
+phoneNoInput.addEventListener("input", (e) => {
+  if (e.target.value !== "" && selectedSeats.length !== 0) {
+    const regex = /^\d+$/;
+    if (regex.test(e.target.value)) {
+      nextBtn.removeAttribute("disabled");
+    }
+  }
+});
+
+modalCloseBtn.addEventListener("click", () => {
+  modalBox.classList.add("hidden");
+});
 
 const createSeatElement = (htmlElement, text) => {
   const selectedSeat = document.createElement(htmlElement);
@@ -69,4 +95,9 @@ const calculatePrice = (idName) => {
   let totalCount = parseInt(idName.innerText);
   totalCount += 550;
   idName.innerText = totalCount;
+};
+
+const calculateDiscount = (discountAmount) => {
+  const discount = parseFloat((grandTotal.innerText * discountAmount) / 100);
+  grandTotal.innerText = parseFloat(grandTotal.innerText - discount);
 };
